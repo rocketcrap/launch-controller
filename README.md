@@ -12,6 +12,27 @@ The following use cases should instruct the design
 * shut down and store boxes and controllers
 * decomission boxes and controllers
 
+### Privision Boxes and Controllers
+1. Turn off controller and boxes
+2. open controller and boxes and set provision jumpers
+3. close and power up controller
+4. connect to the wifi network projects (ssid: ??)
+5. connect to the embedded web interface
+6. in the web page, set
+  * club name
+  * radio channel
+7. power up each box one by one
+  1. see the new box appear
+  2. name the box
+  3. hit the provision button
+  4. see it blink once to indicate it is being provisioned
+  5. it will chirp when it is done (indicating radio link)
+8. power down controller and boxes
+9. open controller
+10. remove jumpers from controllers are boxes
+11. close boxes and controllers
+
+
 ## Launch Control Officer
 * start up and shut down the range
 * quickly and easily see status of boxes and controller
