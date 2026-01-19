@@ -73,3 +73,36 @@ The following use cases should instruct the design
 * Altus Telelaunch https://altusmetrum.org/TeleLaunch/
   * Schematics - https://altusmetrum.org/TeleLaunch/telefireeight-v2/telefireeight-sch.pdf
   * Manual - https://altusmetrum.org/AltOS/doc/telelaunch.html
+
+# Messages
+
+message format
+u8 id
+u8 msg type
+u8[] msg
+
+ack message
+u8[8] iv
+
+gps message
+u32 lat
+u32 lon
+u8 sats
+u8 hdop
+
+cont message
+u8 chan
+u8 battery
+
+armsafe message
+u8 status - 0 safe, 1 armed, 2 inhibited
+u8 battery
+
+box selected message
+bool selected
+
+launch message
+u8 channel (bitmask)
+
+launch rejected
+u8 error (0 - inhibited, 1 - low battery, 2 - box is not armed)
